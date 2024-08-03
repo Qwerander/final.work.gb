@@ -1,0 +1,35 @@
+CREATE DATABASE friends_of_humans;
+USE friends_of_humans;
+
+CREATE TABLE Animals (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    type ENUM('Dog', 'Cat', 'Hamster', 'Horse', 'Camel', 'Donkey') NOT NULL,
+    commands TEXT,
+    birth_date DATE
+);
+
+
+CREATE TABLE YoungAnimals AS
+SELECT *,
+       TIMESTAMPDIFF(MONTH, birth_date, CURDATE()) AS age_in_months
+FROM Animals
+WHERE TIMESTAMPDIFF(YEAR, birth_date, CURDATE()) BETWEEN 1 AND 3;
+
+
+INSERT INTO Animals (name, type, commands, birth_date)
+VALUES ('Buddy', 'Dog', 'sit,stay', '2020-05-10'),
+       ('Whiskers', 'Cat', 'jump,play', '2019-08-14'),
+       ('Nugget', 'Hamster', '', '2021-01-01'),
+       ('Thunder', 'Horse', 'run', '2018-04-22'),
+       ('Humpy', 'Camel', 'carry', '2017-03-13'),
+       ('Eeyore', 'Donkey', 'bray', '2019-12-25');
+
+
+DELETE FROM Animals WHERE type = 'Camel';
+
+
+CREATE TABLE HorsesAndDonkeys AS
+SELECT * FROM Animals
+WHERE type IN ('Horse', 'Donkey');
+
