@@ -1,0 +1,217 @@
+    1  sudo apt update
+    2  sudo apt install mc
+    3  mc
+    4  sudo apt install openssh-server 
+    5  ip a
+    6  sudo apt update
+    7  sudo apt install gcc make perl
+    8  sudo reboot
+    9  sudo usermod -aG vboxsf db
+   10  sudo reboot
+   11  ls
+   12  ls al
+   13  ls -all
+   14  cd ..
+   15  ls
+   16  cd shared
+   17  cat > file1
+   18  at > file2
+   19  cat file2
+   20  cat > file2
+   21  cat file1.txt file2.txt > combined.txt
+   22  cat combined.txt
+   23  mv combined.txt new_combined.txt
+   24  touch fileA.txt fileB.txt fileC.txt
+   25  mkdir my_directory
+   26  mv new_combined.txt my_directory/
+   27  rm file1.txt file2.txt fileA.txt fileB.txt fileC.txt
+   28  rm -r my_directory
+   29  echo "Привет" > file1.txt
+   30  cp file1.txt file2.txt
+   31  ln -s file1.txt file3
+   32  ln file1.txt file4
+   33  cd ..
+   34  echo "Произвольное содержимое" > file1.txt
+   35  cp file1.txt file2.txt
+   36  ln -s file1.txt file3
+   37  ln file1.txt file4
+   38  ldd /bin/bash
+   39  ls
+   40  cls
+   41  mkdir ~/testfolder
+   42  mkdir ~/testfolder/bin
+   43  cp /bin/bash ~/testfolder/bin
+   44  mkdir ~/testfolder/lib ~/testfolder/lib64
+   45  cp /lib/x86_64-linux-gnu/libtinfo.so.6 ~/testfolder/lib
+   46  cp /lib/x86_64-linux-gnu/libc.so.6 ~/testfolder/lib
+   47  cp /lib64/ld-linux-x86-64.so.2 ~/testfolder/lib64/
+   48  sudo chroot ~/testfolder
+   49  cp /bin/ls ~/testfolder/bin/
+   50  cp /lib/x86_64-linux-gnu/libselinux.so.1 ~/testfolder/lib/
+   51  cp /lib/x86_64-linux-gnu/libpcre2-8.so.0 ~/testfolder/lib/
+   52  sudo chroot ~/testfolder
+   53  ip netns add testns
+   54  sudo ip netns add testns
+   55  ip
+   56  ip -a
+   57  ip a
+   58  sudo ip netns exec testns bash
+   59  unshare --net --pid --fork --mount-proc /bin/bash
+   60  sudo unshare --net --pid --fork --mount-proc /bin/bash
+   61  ps aux
+   62  ip a
+   63  sudo apt update
+   64  sudo apt-get install lxc debootstrap bridge-utils lxc-templates
+   65  sudo apt-get install lxd-installer
+   66  lxd init
+   67  sudo lxd init
+   68  sudo lxc-create -n test123 -t ubuntu
+   69  sudo lxc-start -n test123
+   70  sudo lxc-attach -n test123
+   71  sudo lxc-stop -n test123
+   72  sudo nano /var/lib/lxc/test123/config
+   73  sudo lxc-start -n test123
+   74  sudo lxc-attach -n test123
+   75  sudo lxc-stop -n test123
+   76  sudo nano /var/lib/lxc/test123/config
+   77  sudo lxc-start -n test123
+   78  sudo lxc-attach -n test123
+   79  sudo lxc-stop -n test123
+   80  top
+   81  sudo lxc-create -n test32 -t debian -- -a i386
+   82  ls
+   83  cls
+   84  sudo nano /var/lib/lxc/test123/config
+   85  sudo lxc-start -n test123
+   86  sudo lxc-attach -n test123
+   87  sudo lxc-stop -n test123
+   88  sudo nano /var/lib/lxc/test123/config
+   89  lxc storage list
+   90  sudo lxc storage list
+   91  sudo lxc-stop -n test123
+   92  sudo nano /var/lib/lxc/test123/config
+   93  sudo lxc-start -n test123
+   94  sudo nano /var/lib/lxc/test123/config
+   95  sudo lxc-start -n test123
+   96  sudo lxc-attach -n test123
+   97  sudo lxc-stop -n test123
+   98  sudo nano /var/lib/lxc/test123/config
+   99  mount | grep /proc
+  100  sudo mount | grep /proc
+  101  docker --version
+  102  docker run -it -h GB --name gb-test ubuntu:22.10
+  103  docker ps -a
+  104  docker stop gb-test
+  105  docker rm 2f0553cb0dd9
+  106  docker rm $(docker ps -aq) --force
+  107  docker ps -a
+  108  docker images
+  109  docker run -it -h GB --name gb-test ubuntu:22.10
+  110  docker stop gb-test
+  111  docker start gb-test
+  112  docker exec -it gb-test bash
+  113  docker rm gb-test
+  114  docker stop gb-test
+  115  docker rm gb-test
+  116  mkdir /test
+  117  sudo mkdir /test
+  118  sudo mkdir /test/folder
+  119  docker run -it -h GB --name gb-test -v /test/folder:/otherway ubuntu:22.10
+  120  docker stop gb-test
+  121  ls
+  122  ls /
+  123  sudo cat /test/folder/test.tx
+  124  sudo cat /test/folder/test.txt
+  125  exit
+  126  sudo apt-get update
+  127  sudo 
+  128  7b*f5jKv
+  129  sudo apt-get update
+  130  sudo apt-get install ca-certificates curl
+  131  sudo install -m 0755 -d /etc/apt/keyrings
+  132  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+  133  sudo chmod a+r /etc/apt/keyrings/docker.asc
+  134  ls
+  135  ..
+  136  cd 
+  137  cd ..
+  138  ls
+  139  cd ..
+  140  ls
+  141  cd etc/
+  142  ls
+  143  cd apt
+  144  ls
+  145  cd ../../
+  146  ls
+  147  cd home/
+  148  cd ~
+  149  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  150    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  151  sudo apt-get update
+  152  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  153  sudo apt-get update
+  154  sudo docker run hello-world
+  155  docker
+  156  docker --v
+  157  docker --version
+  158  docker info
+  159  sudo docker info
+  160  docker images
+  161  sudo docker images
+  162  sudo docker rmi $(docker images -aq)
+  163  sudo docker rmi $(sudo docker images -aq) --force
+  164  docker images
+  165  sudo docker images
+  166  docker run -it ubuntu bash
+  167  sudo docker run -it ubuntu bash
+  168  sudo docker images
+  169  sudo lxc-start -n test123
+  170  sudo lxc-attach -n test123
+  171  sudo lxc-stop -n test123
+  172  sudo nano /var/lib/lxc/test123/config
+  173  sudo lxc-start -n test123
+  174  sudo lxc-attach -n test123
+  175  sudo lxc-stop -n test123
+  176  docker
+  177  sudo apt update
+  178  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+  179  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  180  echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  181  sudo apt update
+  182  sudo apt install docker-ce
+  183  sudo usermod -aG docker $USER
+  184  newgrp docker
+  185  mkdir seminar
+  186  cd seminar/
+  187  nano app.py
+  188  nano Dockerfile
+  189  docker build -t calc
+  190  docker build -t calc .
+  191  docker run -it calc
+  192  ls
+  193  docker images
+  194  ls -a
+  195  cd ..
+  196  ls
+  197  cd shared/
+  198  ls
+  199  mkdir final_work
+  200  cd final_work/
+  201  echo -e "Собаки\nКошки\nХомяки" > domestic_animals.txt
+  202  echo -e "Лошади\nВерблюды\nОслы" > pack_animals.txt
+  203  cat domestic_animals.txt pack_animals.txt > animals.txt
+  204  cat animals.txt 
+  205  mv animals.txt friends_of_humans.txt
+  206  mkdir animal_directory
+  207  mv friends_of_humans.txt animal_directory/
+  208  sudo apt update
+  209  sudo apt install software-properties-common
+  210  sudo add-apt-repository 'deb http://repo.mysql.com/apt/ubuntu/ $(lsb_release -cs) mysql-apt-config'
+  211  sudo apt update
+  212  sudo apt install mysql-client
+  213  wget http://archive.ubuntu.com/ubuntu/pool/universe/w/wget/wget_1.21.2-1ubuntu1_amd64.deb
+  214  sudo dpkg -i wget_1.21.2-1ubuntu1_amd64.deb
+  215  sudo dpkg -r wget
+  216  history > terminal_history.txt
+
